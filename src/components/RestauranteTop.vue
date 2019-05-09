@@ -1,13 +1,17 @@
 <template>
-  <h2>{{ texto }}</h2>
+  <h2>{{ texto }}: {{ idRestaurante }}</h2>
 </template>
 
 <script>
 export default {
   name: "restaurante-top",
+  mounted() {
+    this.idRestaurante = this.$route.params.id;
+  },
   data() {
     return {
-      texto: "Esto es la pagina del restaurante destacado"
+      texto: "Esto es la página del restaurante destacado",
+      idRestaurante: null
     };
   }
 };

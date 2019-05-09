@@ -1,12 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <img alt="DXCC logo" src="http://cdn.dxcodercrew.net/dxcc-images/favicon.png">
+    <h2>{{ msg }}</h2>
+    <ul>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/restaurantes">Restaurantes</router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'restaurante-top', params:{ id: 16 }}">Restaurante destacado</router-link>
+      </li>
+      <li>
+        <router-link to="/contacto">Contacto</router-link>
+      </li>
+    </ul>
+    <hr>
+    <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      msg: "Restaurante App"
+    };
+  }
+};
+</script>
 
 <style>
 #app {
