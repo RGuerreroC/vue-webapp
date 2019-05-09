@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './plugins/axios'
 import App from './App.vue'
 import Home from './components/Home.vue'
 import Contacto from './components/Contacto.vue'
